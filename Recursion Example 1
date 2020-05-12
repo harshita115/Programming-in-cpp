@@ -1,0 +1,25 @@
+A program in C to calculate the sum of numbers from 1 to n using recursion. 
+The sum of numbers from 1 to 5 : 
+15
+
+***************************************************************************
+#include<iostream>
+#include<stdio.h>
+int sum(int n)
+{
+	int res=0;
+	if(n>0)
+	{
+		res = n + sum(n-1);	
+		return res;
+	}
+}
+
+int main()
+{
+	int res,n;
+	std::cin>>n;
+	res = sum(n);
+	std::cout<<"The sum of "<<n<<" natural numbers is "<<res;
+	return 0;
+}
