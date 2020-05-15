@@ -1,0 +1,30 @@
+A program in C to count the digits of a given number using recursion.
+Enter the number : 500
+The total number of digits in 500 is 3
+
+
+*****************************************************************************************
+
+#include<iostream>
+int countDigit(int num)
+{
+	int static count=0;
+	if(num>0)
+	{
+		count++;
+		countDigit(num/10);
+	}
+	else
+	{
+		return count;
+	}
+}
+int main()
+{
+	int num, count;
+	std::cout<<"Enter the number : ";
+	std::cin>>num;
+	count = countDigit(num);
+	std::cout<<"The total number of digits in "<<num<<" is "<<count;
+	return 0;
+}
