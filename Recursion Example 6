@@ -1,0 +1,24 @@
+A program in C to find the sum of digits of a number using recursion.
+Input any number to find sum of digits: 25
+The Sum of digits of 25 = 7
+
+****************************************************************************
+
+#include<iostream>
+int SumOfDigits(int num)
+{
+	int sum=0, rem;
+	if(num>0)
+	{
+		sum = num%10 + SumOfDigits(num/10);
+	}
+	return sum;
+}
+int main()
+{
+	int num, sum;
+	std::cout<<"Enter the number : ";
+	std::cin>>num;
+	sum = SumOfDigits(num);
+	std::cout<<"The sum of digits of "<<num<<" is "<<sum;
+}
