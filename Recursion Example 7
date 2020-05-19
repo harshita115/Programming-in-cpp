@@ -1,0 +1,26 @@
+A program in C++ to find GCD of two numbers using recursion.
+Enter two numbers: 10  50
+The GCD of 10 and 50 is: 10
+
+******************************************************************************************
+
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b)
+{
+    if (b != 0)
+        return gcd(b, a % b);
+    else
+        return a;
+}
+
+int main()
+{
+    int a, b;
+    std::cout << "Enter two numbers:";
+    std::cin >> a >> b;
+    std::cout << "\nGCD of " << a << " and " << b << " is " << gcd(a,b);
+    std::cout << endl;
+    return 0;
+}
