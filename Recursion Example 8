@@ -1,0 +1,42 @@
+A program in C++ to get the largest element of an array using recursion.
+Input the number of elements to be stored in the array :5
+Enter the elements : 32
+34
+54
+65
+34
+The largest number is : 65
+
+
+*************************************************************************
+
+#include<iostream>
+int n;
+
+int max(int n1, int n2)
+{
+  return n1 > n2 ? n1 : n2;
+}
+
+int large(int a[], int n)
+{
+	if(n==1)
+	{
+		return a[0];
+	}
+	return max(large(a, n-1),a[n-1]);
+}
+int main()
+{
+	int i,a[10],num;
+	std::cout<<"Enter the number of elements : ";
+	std::cin>>n;
+	std::cout<<"Enter the elements : ";
+	for(i=0;i<n;i++)
+	{
+		std::cin>>a[i];
+	}
+	num=large(a,n);
+	std::cout<<"The largest number is : "<<num;
+	return 0;
+}
