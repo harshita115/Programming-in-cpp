@@ -1,0 +1,24 @@
+A program in C to find the Factorial of a number using recursion. 
+Enter the number : 5
+Factorial 120
+********************************************************************************************
+#include<iostream>
+int factorial(int n)
+{
+	int fact;
+	if(n==0)
+	{
+		return fact=1;
+	}
+	return n*factorial(n-1);
+
+}
+int main()
+{
+	int n, fact, i;
+	std::cout<<"Enter the number : ";
+	std::cin>>n;
+	fact=factorial(n);
+	std::cout<<"Factorial "<<fact;
+	return 0;
+}
