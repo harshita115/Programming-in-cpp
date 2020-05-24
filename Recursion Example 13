@@ -1,0 +1,30 @@
+A program in C to find the LCM of two numbers using recursion.
+Enter two numbers a and b : 12 60
+LCM of two numbers are : 60
+
+*********************************************************************************
+
+#include<iostream>
+int lcm(int a, int b)
+{
+	static int num=1;
+	if(num % a == 0 && num % b == 0)
+	{
+		return num;
+	}
+	else
+	{
+		num++;
+		lcm(a,b);
+		return num;	
+	}
+	
+}
+int main()
+{
+	int a, b;
+	std::cout<<"Enter two numbers a and b : ";
+	std::cin>>a>>b;
+	std::cout<<"LCM of two numbers are : "<<lcm(a,b);
+	return 0;
+}
