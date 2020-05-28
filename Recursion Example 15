@@ -1,0 +1,23 @@
+A program in C to calculate the power of any number using recursion.
+Enter the number and it's exponent : 2 5
+The number 2 raised to the power 5 is 32
+
+**************************************************************************************************
+
+#include<iostream>
+int power(int m, int n)
+{
+	if(n==0)
+	{
+		return 1;
+	}
+	return power(m,n-1)*m;
+}
+int main()
+{
+	int m, n;
+	std::cout<<"Enter the number and it's exponent : ";
+	std::cin>>m>>n;
+	std::cout<<"The number "<<m<<" raised to the power "<<n<<" is "<<power(m,n);
+	return 0;
+}
