@@ -1,0 +1,37 @@
+A program in C to find the first capital letter in a string using recursion.
+Enter a string : teSt
+S
+
+******************************************************************************************8
+
+#include<iostream>
+#include<string.h>
+int check(char* str)
+{
+	static int i=0; 
+	if(i < strlen(str))
+	{
+		if(isupper(str[i]))
+		{
+			std::cout<<str[i];
+			return 1;
+		}
+		else
+		{
+			i=i+1;
+			return check(str);
+		}
+	}
+	else
+	{
+		return 0;
+	}
+}
+int main()
+{
+	char str[20], count;
+	std::cout<<"Enter a string : ";
+	std::cin>>str;
+	count = check(str);
+	return 0;
+}
